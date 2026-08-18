@@ -1,0 +1,101 @@
+DISCRETE STRUCTURES: SETS, RELATIONS, AND FUNCTIONS
+Course Notes - Introductory Overview (Plain Text Version)
+
+1. SETS
+
+A set is a well-defined collection of distinct objects, called elements or
+members. Sets are usually denoted by capital letters (A, B, C), and their
+elements are listed inside curly braces. For example, A = {1, 2, 3, 4} is a
+set containing four elements.
+
+A set can be described in two main ways:
+- Roster method: listing all elements explicitly, e.g. A = {2, 4, 6, 8}
+- Set-builder notation: describing a rule elements must satisfy, e.g.
+  A = {x such that x is an even number less than 10}
+
+Special sets:
+- The empty set (also called the null set) contains no elements at all.
+- The universal set (denoted U) contains all elements under consideration in
+  a given context.
+
+Subsets: A set A is a subset of B if every element of A is also an element
+of B. If A is a subset of B and A is not equal to B, then A is called a
+proper subset of B.
+
+Set operations:
+- Union: all elements that are in A, in B, or in both.
+- Intersection: only the elements that appear in both A and B.
+- Difference: elements that are in A but not in B.
+- Complement: all elements in the universal set that are NOT in A.
+
+Cardinality refers to the number of elements in a set, written as |A|. For
+example, if A = {1, 2, 3}, then |A| has a value of 3.
+
+The Power Set of a set A is the set of all possible subsets of A, including
+the empty set and A itself. If A has n elements, then the Power Set has
+2 to the power of n elements. For example, if A = {1, 2}, the Power Set of
+A is { empty set, {1}, {2}, {1,2} }, which has 4 elements total, since 2
+squared equals 4.
+
+
+2. RELATIONS
+
+A relation between two sets A and B is a subset of the Cartesian product of
+A and B. The Cartesian product of A and B is the set of all ordered pairs
+(a, b) where a comes from A and b comes from B.
+
+For example, if A = {1, 2} and B = {x, y}, then the Cartesian product
+contains the pairs: (1,x), (1,y), (2,x), (2,y).
+
+A relation R from A to B is simply any subset of that Cartesian product. If
+the pair (a, b) is part of R, we say "a is related to b."
+
+Properties a relation can have, usually discussed when A and B are the same
+set:
+- Reflexive: every element is related to itself.
+- Symmetric: if a is related to b, then b must also be related to a.
+- Transitive: if a is related to b, and b is related to c, then a must also
+  be related to c.
+- Antisymmetric: if a is related to b, and b is related to a, then a and b
+  must be equal.
+
+A relation that is reflexive, symmetric, and transitive is called an
+equivalence relation. Equivalence relations split a set into non-overlapping
+groups called equivalence classes, where every element in a group is
+considered equivalent to every other element in that same group.
+
+A relation that is reflexive, antisymmetric, and transitive is called a
+partial order. This is used to describe things that can be ranked or
+ordered in a structured way, even if not every pair of elements can be
+directly compared.
+
+
+3. FUNCTIONS
+
+A function f from set A to set B is a special type of relation where every
+element of A is related to exactly one element of B. A is called the
+domain, and B is called the codomain. The set of actual output values
+produced is called the range, and the range is always a subset of the
+codomain.
+
+Types of functions:
+- Injective (one-to-one): different inputs always map to different outputs.
+  No two elements of A share the same output in B.
+- Surjective (onto): every element of B is mapped to by at least one
+  element of A. The range equals the entire codomain.
+- Bijective: a function that is both injective and surjective. Bijective
+  functions have a well-defined inverse function, since every output maps
+  back to exactly one unique input.
+
+Composition of functions: if f maps A to B, and g maps B to C, then the
+composition of g and f maps A to C directly, by first applying f, then
+applying g to that result.
+
+
+4. WHY THIS MATTERS
+
+Sets, relations, and functions are the foundation for almost everything else
+in discrete mathematics and computer science. Database theory relies
+heavily on set operations and relations, algorithm analysis relies on
+functions and their properties, and understanding equivalence relations
+shows up later in topics like graph theory and automata theory.
