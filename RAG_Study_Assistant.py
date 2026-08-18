@@ -36,6 +36,8 @@ def load_pdf_file(uploaded_file):
     with pdfplumber.open(uploaded_file) as pdf:
         for page in pdf.pages:
             text += page.extract_text()
+
+    text = text.replace("<br>", "\n").replace("<br/>", "\n").replace("<br />", "\n")
     return text
 
 def get_file_hash(uploaded_file):
